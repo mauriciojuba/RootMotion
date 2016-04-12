@@ -12,13 +12,19 @@ public class Movement : MonoBehaviour {
 
     void Update()
     {
-        //turning
+        Turning();
         //jumping
         Move();
     }
 
     void Move()
     {
-        anim.SetFloat("Forward", Input.GetAxisRaw("Vertical"));
+        anim.SetFloat("Forward", Input.GetAxis("Vertical"));
     }
+    void Turning()
+    {
+        anim.SetFloat("Turn", Input.GetAxis("Horizontal"));
+    }
+
+
 }
